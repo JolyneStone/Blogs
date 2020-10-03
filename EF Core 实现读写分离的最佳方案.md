@@ -5,8 +5,8 @@
 
 #### 思路
 根据园子里的Jeffcky大神的博客, 参考 
-[EntityFramework Core进行读写分离最佳实践方式，了解一下（一）？]("https://www.cnblogs.com/CreateMyself/p/9241523.html")
-[EntityFramework Core进行读写分离最佳实践方式，了解一下（二）？]("https://www.cnblogs.com/CreateMyself/p/9261435.html")
+[EntityFramework Core进行读写分离最佳实践方式，了解一下（一）？](https://www.cnblogs.com/CreateMyself/p/9241523.html)
+[EntityFramework Core进行读写分离最佳实践方式，了解一下（二）？](https://www.cnblogs.com/CreateMyself/p/9261435.html)
 
 最简单的思路就是使用手动切换EF Core上下文的连接, 即context.Database.GetDbConnection().ConnectionString = "xxx", 但必须要先创建上下文, 再关闭之前的连接, 才能进行切换
 另一种方式是通过监听Diagnostic来将进行查询的sql切换到从库执行, 这种方式虽然可以实现无感知的切换操作, 但不能满足公司的业务需求. 在后台管理或其他对数据实时性要求比较高的项目里,查询操作也都应该走主库,而这种方式却会切换到从库去. 另一方面就是假若公司的库比较多,每种业务都对应了一个库, 每个库都对应了一种DbContext, 这种情况下, 要实现自动切换就变得很复杂了.

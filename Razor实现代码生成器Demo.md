@@ -67,5 +67,5 @@ order by a.column_id
 ![](https://github.com/zzq424/Blogs/blob/master/images/20201003225143.png?raw=true)
 
 
-demo已上传至[github]("https://github.com/zzq424/demo/tree/master/code-generator")
+demo已上传至 [github](https://github.com/zzq424/demo/tree/master/code-generator)
 
