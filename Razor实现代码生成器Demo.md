@@ -35,13 +35,13 @@ left join
 where s.TABLE_SCHEMA = 'dbo' and c.name = 'Test1' and s.TABLE_NAME = 'Test1'
 order by a.column_id
 ```
-![](https://github.com/zzq424/Blogs/blob/master/images/20201003221926.png?raw=true)
+![](https://github.com/JolyneStone/Blogs/blob/master/images/20201003221926.png?raw=true)
 
 
 具体的思路是使用Razor来生成C#代码，再使用Roslyn来编译并执行C#代码，把输出保存到文件中。
 
 表结构
-![](https://github.com/zzq424/Blogs/blob/master/images/20201003224835.png?raw=true)
+![](https://github.com/JolyneStone/Blogs/blob/master/images/20201003224835.png?raw=true)
 
 ```C#
     class Program
@@ -64,8 +64,8 @@ order by a.column_id
 ```
 
 生成的C#文件
-![](https://github.com/zzq424/Blogs/blob/master/images/20201003225143.png?raw=true)
+![](https://github.com/JolyneStone/Blogs/blob/master/images/20201003225143.png?raw=true)
 
 
-demo已上传至 [github](https://github.com/zzq424/demo/tree/master/code-generator)
+demo已上传至 [github](https://github.com/JolyneStone/demo/tree/master/code-generator)
 
